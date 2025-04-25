@@ -1,102 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amaan Paya | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      animation: fadeIn 1s ease-in;
-      cursor: grab;
-    }
-    header, footer {
-      background-color: #333;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-      animation: slideInDown 1s ease-in;
-    }
-    section {
-      padding: 2rem;
-      animation: fadeInUp 1.2s ease-in;
-    }
-    .project {
-      background-color: #fff;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-    }
-    .project h3 {
-      margin-top: 0;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-      transition: color 0.2s ease;
-      cursor: pointer;
-    }
-    a:hover {
-      color: #004799;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amaan Paya | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 font-sans">
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-6 text-center animate-slide-in-down">
+      <h1 class="text-3xl font-bold">Amaan Paya</h1>
+      <p class="text-lg mt-2">Backend Developer</p>
+    </header>
 
-    @keyframes slideInDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    <!-- Projects Section -->
+    <section id="projects" class="p-6 md:p-10 animate-fade-in-up">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Projects</h2>
 
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Amaan Paya</h1>
-    <p>Backend Developer | Data Analytics Enthusiast</p>
-  </header>
+      <div class="space-y-6 max-w-3xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-1 transition">
+          <h3 class="text-xl font-bold mb-2">Comic-Verse – AI Comic Generator</h3>
+          <p class="mb-2">Developed an AI-powered web app that generates comics from user prompts using GPT and DeepSeek API. Built using Flask with character customization and interactive storytelling.</p>
+          <p class="mb-2"><strong>Tech:</strong> Flask, GPT, DeepSeek</p>
+          <a href="#" class="text-blue-600 hover:text-blue-800 pointer-events-none text-sm">GitHub Link (coming soon)</a>
+        </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-1 transition">
+          <h3 class="text-xl font-bold mb-2">Currency Converter (CLI App)</h3>
+          <p class="mb-2">A command-line Java application that converts between 10 global currencies using HashMap and custom logic for rate conversion and validation.</p>
+          <p><strong>Tech:</strong> Java, CLI, HashMap</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="project">
-      <h3>Comic-Verse – AI Comic Generator</h3>
-      <p>Developed an AI-powered web app that generates comics from user prompts using GPT and DeepSeek API. Built using Flask and MongoDB with character customization and interactive storytelling.</p>
-      <p><strong>Tech:</strong> Flask, GPT, MongoDB, DeepSeek</p>
-      <a href="#">GitHub Link (coming soon)</a>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="p-6 md:p-10 bg-white animate-fade-in-up">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Contact</h2>
+      <div class="text-center space-y-2">
+        <p>Email: <a href="mailto:amaanpaya2005@gmail.com" class="text-blue-600 hover:text-blue-800">amaanpaya2005@gmail.com</a></p>
+        <p>Location: Ahmedabad, India</p>
+      </div>
+    </section>
 
-    <div class="project">
-      <h3>Currency Converter (CLI App)</h3>
-      <p>A command-line Java application that converts between 10 global currencies using HashMap and custom logic for rate conversion and validation.</p>
-      <p><strong>Tech:</strong> Java, CLI, HashMap</p>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4 text-center text-sm">
+      &copy; 2025 Amaan Paya. All rights reserved.
+    </footer>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:amaanpaya2005@gmail.com">amaanpaya2005@gmail.com</a></p>
-    <p>Location: Ahmedabad, India</p>
-  </section>
+    <!-- Animations -->
+    <style>
+      @keyframes fade-in-up {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 1s ease-in-out both;
+      }
 
-  <footer>
-    <p>&copy; 2025 Amaan Paya. All rights reserved.</p>
-  </footer>
-</body>
+      @keyframes slide-in-down {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      .animate-slide-in-down {
+        animation: slide-in-down 1s ease-out both;
+      }
+    </style>
+  </body>
 </html>
